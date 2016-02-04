@@ -4,6 +4,7 @@ colorscheme solarized
 let g:solarized_termcolors=256
 set nocompatible
 filetype plugin on
+filetype indent on
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -27,11 +28,19 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 " Ignore case of searches
 set ignorecase
+set wildignorecase
 " Enable mouse in all modes
 set mouse=a
 
+" size of a hard tabstop
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec="/usr/bin/eslint"
+let g:jsx_ext_required = 0
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -45,3 +54,6 @@ let g:syntastic_check_on_wq = 0
 
 " indentation
 let g:indent_guides_auto_colors = 0
+
+autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>

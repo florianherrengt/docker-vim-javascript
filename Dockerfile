@@ -31,8 +31,9 @@ RUN git clone https://github.com/cakebaker/scss-syntax.vim /root/.vim/bundle/scs
 RUN git clone https://github.com/hail2u/vim-css3-syntax /root/.vim/bundle/vim-css3-syntax
 RUN git clone https://github.com/gcorne/vim-sass-lint /root/.vim/bundle/vim-sass-lint
 RUN git clone https://github.com/lfilho/cosco.vim /root/.vim/bundle/cosco
+RUN git clone https://github.com/terryma/vim-multiple-cursors /root/.vim/bundle/vim-multiple-cursors
+RUN git clone https://github.com/easymotion/vim-easymotion /root/.vim/bundle/vim-easymotion
 COPY ./.vimrc /root
-COPY ./.aliases /root
 
 RUN mkdir /projects
 WORKDIR /projects

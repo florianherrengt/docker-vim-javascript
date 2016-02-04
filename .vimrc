@@ -57,3 +57,6 @@ let g:indent_guides_auto_colors = 0
 
 autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+
+" easymotion
+nmap s <Plug>(easymotion-s2)

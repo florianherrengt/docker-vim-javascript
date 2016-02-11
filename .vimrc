@@ -13,8 +13,6 @@ set esckeys
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
 set ttyfast
-" Allow to paste from external app
-set paste
 " Add the g flag to search/replace by default
 set gdefault
 " Use UTF-8 without BOM
@@ -35,9 +33,9 @@ set wildignorecase
 set mouse=a
 
 " size of a hard tabstop
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint']

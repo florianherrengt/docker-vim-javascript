@@ -6,6 +6,7 @@ dependencies:
     - docker info
     - docker build --no-cache -t florianherrengt/dockervim:latest .
 deployment:
+  development:
     commands:
       - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
       - docker push florianherrengt/dockervim:latest

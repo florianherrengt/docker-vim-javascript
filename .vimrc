@@ -33,9 +33,9 @@ set wildignorecase
 set mouse=a
 
 " size of a hard tabstop
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 " syntastic
 let g:syntastic_javascript_checkers = ['eslint']
@@ -50,6 +50,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = { "!level":  "errors" }
 
 
 " indentation
@@ -60,3 +61,7 @@ autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#com
 
 " easymotion
 nmap s <Plug>(easymotion-s2)
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'

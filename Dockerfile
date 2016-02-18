@@ -33,6 +33,7 @@ RUN git clone https://github.com/gcorne/vim-sass-lint /root/.vim/bundle/vim-sass
 RUN git clone https://github.com/lfilho/cosco.vim /root/.vim/bundle/cosco
 RUN git clone https://github.com/terryma/vim-multiple-cursors /root/.vim/bundle/vim-multiple-cursors
 RUN git clone https://github.com/easymotion/vim-easymotion /root/.vim/bundle/vim-easymotion
+RUN git clone https://github.com/ctrlpvim/ctrlp.vim /root/.vim/bundle/ctrlp
 COPY ./.vimrc /root
 
 RUN mkdir /projects

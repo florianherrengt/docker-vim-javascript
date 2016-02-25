@@ -52,7 +52,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "!level":  "errors" }
 
+" ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+" airline
+set laststatus=2 
 " indentation
 let g:indent_guides_auto_colors = 0
 

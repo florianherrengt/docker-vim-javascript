@@ -9,7 +9,7 @@ RUN curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 RUN apt-get -y install nodejs
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-RUN npm install -g eslint babel-eslint eslint-plugin-react
+RUN npm install -g eslint@1.9 babel-eslint eslint-plugin-react
 
 RUN git clone https://github.com/ternjs/tern_for_vim /root/.vim/bundle/tern_for_vim
 WORKDIR /root/.vim/bundle/tern_for_vim
@@ -33,7 +33,16 @@ RUN git clone https://github.com/gcorne/vim-sass-lint /root/.vim/bundle/vim-sass
 RUN git clone https://github.com/lfilho/cosco.vim /root/.vim/bundle/cosco
 RUN git clone https://github.com/terryma/vim-multiple-cursors /root/.vim/bundle/vim-multiple-cursors
 RUN git clone https://github.com/easymotion/vim-easymotion /root/.vim/bundle/vim-easymotion
-RUN git clone https://github.com/ctrlpvim/ctrlp.vim /root/.vim/bundle/ctrlp
+RUN git clone https://github.com/fholgado/minibufexpl.vim /root/.vim/bundle/minibufexpl
+RUN git clone https://github.com/scrooloose/nerdtree /root/.vim/bundle/nerdtree
+RUN git clone https://github.com/Xuyuanp/nerdtree-git-plugin /root/.vim/bundle/nerdtree-git-plugin
+RUN git clone https://github.com/wincent/command-t  /root/.vim/bundle/command-t
+RUN git clone https://github.com/tpope/vim-vinegar  /root/.vim/bundle/vim-vinegar
+RUN git clone https://github.com/ctrlpvim/ctrlp.vim  /root/.vim/bundle/ctrlp
+RUN git clone https://github.com/vim-airline/vim-airline  /root/.vim/bundle/vim-airline
+RUN git clone https://github.com/mhinz/vim-signify  /root/.vim/bundle/vim-signify
+RUN git clone https://github.com/mattn/emmet-vim  /root/.vim/bundle/emmet-vim
+
 COPY ./.vimrc /root
 
 RUN mkdir /projects
